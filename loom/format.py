@@ -444,6 +444,8 @@ def _import_rows_file(args):
             pos = name_to_pos.get(encoder['name'])
             add = add_field[loom.schema.MODEL_TO_DATATYPE[encoder['model']]]
             encode = load_encoder(encoder)
+            if encode == int:
+                encode = lambda s: int(float(s))
             schema.append((pos, add, encode))
 
         def rows():
