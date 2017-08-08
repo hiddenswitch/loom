@@ -41,7 +41,7 @@ from parsable import parsable
 
 
 library_dirs = []
-libraries = ['protobuf', 'distributions_shared']
+libraries = ['protobuf', 'distributions_shared_release']
 include_dirs = ['include']
 ve = os.environ.get('VIRTUAL_ENV')
 if ve:
